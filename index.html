@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5_grid</title>
+    <style type="text/css">
+    html{
+         height: 100%;
+    }
+    body{
+        background-color: black;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: repeat(8, 100px);
+        gap: 5px;
+        justify-items: center;
+    }
+    div>div{
+        /*border: 5px solid white;*/
+        background-color: brown;
+        width: 100%;
+    }
+    #ull-L{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    #ull-R{
+        grid-column: 9/10;
+        grid-row: 3/4;
+    }
+    #nas{
+        grid-column: 6/7;
+        grid-row: 4/6;
+    }
+    #galta-L{
+        grid-column: 4/5;
+        grid-row: 6/7;
+    }
+    #galta-R{
+        grid-column: 8/9;
+        grid-row: 6/7;
+    }
+    #boca{
+        grid-column: 5/8;
+        grid-row: 7/8;
+    }
+    /*TABLET*/
+    @media (max-width:1024px){
+        body{
+            background-color: violet;
+        }
+        #galta-L, #galta-R{
+            grid-row: 7/8;
+        }
+    }
+    /*MÒBIL*/
+    @media (max-width:600px){
+        body{
+            background-color: turquoise;
+        }
+        #galta-L, #galta-R{
+            grid-row: 8/9;
+        }
+        #ull-L, #ull-R{
+            grid-row: 4/5;   
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="ull-L">ull-L</div>
+        <div id="ull-R">ull-R</div>
+        <div id="nas">nas</div>
+        <div id="galta-L">galta-L</div>
+        <div id="galta-R">galta-R</div>
+        <div id="boca">boca</div>
+    </div>
+    
+</body>
+</html>
